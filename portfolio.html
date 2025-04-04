@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            background: linear-gradient(120deg, #f0f2f0 0%, #e8eaed 100%);
+        }
+        header {
+            background: linear-gradient(45deg, #2193b0, #6dd5ed);
+            color: white;
+            text-align: center;
+            padding: 3rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .profile-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 1.5rem;
+        }
+        .profile-image {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            border: 4px solid white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.2);
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+        .profile-image:hover {
+            transform: scale(1.05);
+        }
+        .profile-text {
+            text-align: center;
+        }
+        .profile-text h1 {
+            margin-bottom: 0.5rem;
+            font-size: 2.5rem;
+        }
+        nav {
+            background: #2c3e50;
+            padding: 1rem;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 1rem;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            transition: all 0.3s ease;
+        }
+        nav a:hover {
+            background: #3498db;
+            transform: translateY(-2px);
+        }
+        section {
+            padding: 2rem;
+            margin: 1rem auto;
+            max-width: 1200px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+        }
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+        .project-card {
+            border: none;
+            padding: 1.5rem;
+            border-radius: 10px;
+            background: linear-gradient(145deg, #ffffff, #f0f0f0);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+        h2 {
+            color: #2193b0;
+            margin-bottom: 1rem;
+            border-bottom: 2px solid #6dd5ed;
+            padding-bottom: 0.5rem;
+        }
+        .skills-list li {
+            background: #f8f9fa;
+            margin: 0.5rem 0;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            border-left: 4px solid #2193b0;
+        }
+        #contact p {
+            padding: 0.5rem 0;
+            color: #2c3e50;
+        }
+        #contact p a {
+            color: #2193b0;
+            text-decoration: none;
+        }
+        #contact p a:hover {
+            color: #6dd5ed;
+        }
+        footer {
+            background: linear-gradient(45deg, #2c3e50, #3498db);
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="profile-container">
+            <img src="n1.jpg" alt="Narasimha Raja Avvaru" class="profile-image">
+            <div class="profile-text">
+                <h1>Narasimha Raja Avvaru</h1>
+                <p>passionate about New Technology</p>
+            </div>
+        </div>
+    </header>
+
+    <nav>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>I am passionate about coding and building efficient, user-friendly applications that solve real-world problems.</p>
+    </section>
+
+    <section id="skills">
+        <h2>Skills</h2>
+        <ul class="skills-list">
+            <li>HTML5, CSS3, JavaScript, Java</li>
+            <li>React.js, Node.js</li>
+            <li>MySQL, OracleSQL</li>
+            <li>Responsive Web Design</li>
+            <li>Git & Version Control</li>
+            <li>windows, Linux, Mac</li>
+        </ul>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="project-grid">
+            <div class="project-card">
+                <h3>Employee Management System</h3>
+                <p>Developed a Java-based application to manage employee records, integrated with MySQL
+                  for data storage.
+                   Implemented features like CRUD operations and user authentication.</p>
+            </div>
+            <div class="project-card">
+                <h3>PriceTrack App</h3>
+                <p>Smart Price Tracker is a simple and efficient web application designed to help users log product prices along with the store details into Google Sheets. The application features a dropdown selection for products and stores, eliminating manual entry errors and ensuring consistency in data. With a responsive and mobile-friendly design, users can easily access and submit data from any device.
+
+                  This app can be used for price monitoring, expense tracking, or inventory management, making it ideal for businesses, shoppers, or anyone who needs to keep track of product prices across different stores.</p>
+            </div>
+            <div class="project-card">
+                <h3>TrackSwift 🚚</h3>
+                <p>TrackSwift 🚚 is a powerful and user-friendly logistics management application designed to track drivers, monitor vehicle readings, and capture real-time locations. This application ensures efficient fleet management, reducing operational costs and improving delivery efficiency.
+
+                  With Google Sheets integration, the app automatically records driver details, vehicle odometer readings, live location data, and trip history for better logistics planning. The system is ideal for transport companies, fleet owners, and businesses managing deliveries.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:avvarunarasimharaja.com">avvarunarasimharaja@gmail.com</a></p>
+        <p>LinkedIn: <a href="http://www.linkedin.com/in/narasimha-raja-avvaru-80962b289">http://www.linkedin.com/in/narasimha-raja-avvaru-80962b289</a></p>
+        <p>GitHub: <a href="https://github.com/Narasimha-tech1">https://github.com/Narasimha-tech1</a></p>
+    </section>
+   <br>
+   
+    <footer>
+        <p>&copy; 2025 Narasimha Raja Avvaru. All rights reserved.</p>
+    </footer>
+</body>
+</html>
